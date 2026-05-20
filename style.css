@@ -641,7 +641,7 @@ select {
     font-size: 6rem;
 
   }
-  @media(max-width: 768px) {
+ @media(max-width: 768px) {
 
   .hero {
 
@@ -667,51 +667,50 @@ select {
 
     align-items: center;
 
-    gap: 25px;
+    justify-content: center;
 
     min-height: auto;
 
-  }
-
-  .phone-mockup {
-
-    width: 240px;
-    height: 500px;
-
-    font-size: 5rem;
+    gap: 20px;
 
   }
 
-  /* REMOVE POSIÇÃO ABSOLUTA */
-  .card1,
-  .card2 {
+  /* CARDS MOBILE */
+  .floating-card {
 
-    position: static;
+    position: static !important;
 
     width: 260px;
 
-    margin: 0 auto;
+    transform: none !important;
 
-    transform: none;
+    margin: 0 auto;
 
   }
 
-  /* ORDEM DOS ELEMENTOS */
+  /* ORDEM */
   .card1 {
 
     order: 1;
 
   }
 
-  .phone-mockup {
+  .card2 {
 
     order: 2;
 
   }
 
-  .card2 {
+  .phone-mockup {
 
     order: 3;
+
+    width: 240px;
+    height: 500px;
+
+    font-size: 5rem;
+
+    margin-top: 20px;
 
   }
 
