@@ -641,27 +641,77 @@ select {
     font-size: 6rem;
 
   }
+  @media(max-width: 768px) {
 
-  .floating-card {
+  .hero {
 
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
+    text-align: center;
 
-    transform: none !important;
-
-    width: 100%;
-    max-width: 280px;
+    padding-top: 40px;
 
   }
 
+  .hero-buttons {
+
+    justify-content: center;
+
+  }
+
+  .hero-image {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+
+    min-height: auto;
+
+  }
+
+  .phone-mockup {
+
+    width: 240px;
+    height: 500px;
+
+    font-size: 5rem;
+
+  }
+
+  /* REMOVE POSIÇÃO ABSOLUTA */
   .card1,
   .card2 {
 
+    position: static;
+
+    width: 260px;
+
     margin: 0 auto;
+
+    transform: none;
+
+  }
+
+  /* ORDEM DOS ELEMENTOS */
+  .card1 {
+
+    order: 1;
+
+  }
+
+  .phone-mockup {
+
+    order: 2;
+
+  }
+
+  .card2 {
+
+    order: 3;
 
   }
 
