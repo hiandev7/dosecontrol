@@ -1,0 +1,605 @@
+:root {
+
+  --primary: #2563EB;
+  --secondary: #10B981;
+
+  --bg: #F8FAFC;
+  --card: #FFFFFF;
+
+  --text: #0F172A;
+  --gray: #E5E7EB;
+
+}
+
+body.dark {
+
+  --bg: #0F172A;
+  --card: #111827;
+  --text: #F8FAFC;
+  --gray: #1E293B;
+
+}
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+body {
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: 'Inter', sans-serif;
+
+  transition: .3s;
+
+}
+
+h1, h2, h3, h4 {
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.header {
+
+  width: 100%;
+
+  padding: 20px 6%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+
+  backdrop-filter: blur(12px);
+
+  background: rgba(255,255,255,0.7);
+
+  z-index: 999;
+
+}
+
+body.dark .header {
+
+  background: rgba(15,23,42,0.7);
+
+}
+
+.logo {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--primary);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+}
+
+.nav {
+
+  display: flex;
+  gap: 30px;
+
+}
+
+.nav a {
+
+  text-decoration: none;
+  color: var(--text);
+
+  font-weight: 500;
+
+}
+
+.header-buttons {
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.dark-btn,
+.login-btn,
+.primary-btn,
+.secondary-btn,
+.ghost-btn,
+.submit-btn {
+
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+
+}
+
+.dark-btn {
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  background: var(--card);
+  color: var(--text);
+
+}
+
+.login-btn,
+.primary-btn,
+.submit-btn {
+
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+
+}
+
+.secondary-btn {
+
+  background: white;
+
+  color: var(--primary);
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+}
+
+.ghost-btn {
+
+  background: transparent;
+
+  color: var(--text);
+
+  padding: 14px 24px;
+
+}
+
+.hero {
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 100px 6%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  align-items: center;
+  gap: 60px;
+
+}
+
+.badge {
+
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(37,99,235,0.1);
+
+  color: var(--primary);
+
+  font-weight: 600;
+
+  margin-bottom: 25px;
+
+}
+
+.hero h1 {
+
+  font-size: 4rem;
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+
+}
+
+.hero p {
+
+  color: #64748B;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+
+}
+
+.hero-buttons {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+}
+
+.hero-image {
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 700px;
+
+}
+
+.phone-mockup {
+
+  width: 320px;
+  height: 620px;
+
+  border-radius: 40px;
+
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 8rem;
+  color: white;
+
+  box-shadow: 0 30px 80px rgba(37,99,235,0.25);
+
+}
+
+.floating-card {
+
+  position: absolute;
+
+  background: var(--card);
+
+  padding: 18px;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  animation: float 3s infinite ease-in-out;
+
+}
+
+.card1 {
+
+  top: 160px;
+  left: -70px;
+
+}
+
+.card2 {
+
+  top: 320px;
+  left: -70px;
+
+}
+
+@keyframes float {
+
+  0% {
+
+    transform: translateY(0px);
+
+  }
+
+  50% {
+
+    transform: translateY(-10px);
+
+  }
+
+  100% {
+
+    transform: translateY(0px);
+
+  }
+
+}
+
+.section {
+
+  padding: 120px 6%;
+
+}
+
+.section-title {
+
+  text-align: center;
+
+  margin-bottom: 70px;
+
+}
+
+.section-title span {
+
+  color: var(--primary);
+
+  font-weight: 600;
+
+}
+
+.section-title h2 {
+
+  font-size: 2.8rem;
+
+  margin-top: 15px;
+
+}
+
+.cards-grid,
+.benefits-grid,
+.dashboard-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 30px;
+
+}
+
+.card,
+.benefit-card,
+.dashboard-card {
+
+  background: var(--card);
+
+  padding: 35px;
+
+  border-radius: 28px;
+
+  transition: .3s;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.card:hover,
+.benefit-card:hover,
+.dashboard-card:hover {
+
+  transform: translateY(-10px);
+
+}
+
+.icon {
+
+  width: 65px;
+  height: 65px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  margin-bottom: 25px;
+
+}
+
+.blue {
+
+  background: var(--primary);
+
+}
+
+.green {
+
+  background: var(--secondary);
+
+}
+
+.orange {
+
+  background: #F59E0B;
+
+}
+
+.purple {
+
+  background: #8B5CF6;
+
+}
+
+.dashboard {
+
+  padding: 120px 6%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(37,99,235,0.08),
+    rgba(16,185,129,0.08)
+  );
+
+}
+
+.large {
+
+  grid-column: span 2;
+
+}
+
+.vaccine-item {
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: rgba(37,99,235,0.05);
+
+}
+
+.complete,
+.pending {
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: .8rem;
+  font-weight: 600;
+
+}
+
+.complete {
+
+  background: rgba(16,185,129,0.15);
+  color: #10B981;
+
+}
+
+.pending {
+
+  background: rgba(245,158,11,0.15);
+  color: #F59E0B;
+
+}
+
+.form-grid {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 20px;
+
+}
+
+input,
+select {
+
+  width: 100%;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  border: 1px solid var(--gray);
+
+  background: var(--card);
+
+  color: var(--text);
+
+}
+
+.footer {
+
+  background: #0F172A;
+
+  color: white;
+
+  padding: 80px 6% 30px;
+
+}
+
+.footer-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 40px;
+
+}
+
+.footer ul {
+
+  list-style: none;
+
+  margin-top: 15px;
+
+}
+
+.footer li {
+
+  margin-bottom: 10px;
+
+  color: #CBD5E1;
+
+}
+
+.socials {
+
+  display: flex;
+  gap: 15px;
+
+  font-size: 1.5rem;
+
+  margin-top: 20px;
+
+}
+
+.footer-bottom {
+
+  text-align: center;
+
+  margin-top: 60px;
+
+  color: #94A3B8;
+
+}
+
+@media(max-width: 900px) {
+
+  .nav {
+
+    display: none;
+
+  }
+
+  .hero h1 {
+
+    font-size: 2.8rem;
+
+  }
+
+  .large {
+
+    grid-column: span 1;
+
+  }
+
+}
