@@ -274,8 +274,6 @@ body.dark .header {
 
 .floating-card {
 
-  position: absolute;
-
   background: var(--card);
 
   padding: 18px;
@@ -292,17 +290,24 @@ body.dark .header {
 
 }
 
+.card1,
+.card2 {
+
+  position: absolute;
+
+  left: -20px;
+
+}
+
 .card1 {
 
   top: 160px;
-  left: -70px;
 
 }
 
 .card2 {
 
   top: 320px;
-  left: -70px;
 
 }
 
@@ -648,9 +653,9 @@ select {
     display: flex;
     flex-direction: column;
 
-    text-align: center;
+    align-items: center;
 
-    padding-top: 40px;
+    text-align: center;
 
   }
 
@@ -667,50 +672,27 @@ select {
 
     align-items: center;
 
-    justify-content: center;
+    gap: 20px;
 
     min-height: auto;
 
-    gap: 20px;
-
   }
 
-  /* CARDS MOBILE */
-  .floating-card {
-
-    position: static !important;
-
-    width: 260px;
-
-    transform: none !important;
-
-    margin: 0 auto;
-
-  }
-
-  /* ORDEM */
-  .card1 {
-
-    order: 1;
-
-  }
-
+  .card1,
   .card2 {
 
-    order: 2;
+    position: static;
+
+    width: 260px;
 
   }
 
   .phone-mockup {
 
-    order: 3;
-
     width: 240px;
     height: 500px;
 
     font-size: 5rem;
-
-    margin-top: 20px;
 
   }
 
